@@ -1,7 +1,9 @@
 ![header](https://capsule-render.vercel.app/api?type=transparent&color=FFA73F&height=100&section=header&text=NAVISIONER&fontSize=90&fontColor=FFA73F)
 <div align="center">
 
-_**Navisioner**_ is a robot that guides visually impaired individuals from the starting point to their destination, </br> avoids and responds to surrounding hazards, and safely assists them along the way.
+_**Navisioner**_ is a robot
+</br> guides visually impaired individuals from the starting point to their destination,
+</br> avoids and responds to surrounding hazards, and safely assists them along the way.
 
 ----
 
