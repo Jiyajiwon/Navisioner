@@ -1,3 +1,3 @@
 # Navisioner
 A Navigation Guide Robot for the Visually Impaired
-![Capstone 최종발표  NAVISIONER](https://github.com/user-attachments/assets/c2517cfb-8344-4a61-9213-e581cf59d7a0)
+<img width="1210" alt="스크린샷 2025-01-14 오후 3 16 24" src="https://github.com/user-attachments/assets/ea43d0cb-5258-454e-b52f-297dfdf2bf43" />
