@@ -17,7 +17,7 @@ _**Navisioner**_ is a robot
 - [Reference](#reference)
 - [Technologies](#technologies)
   </br>&nbsp;&nbsp;&nbsp;&nbsp;[(A) Voice Commands and Route Voice Guidance]((a)-voice-commands-and-route-voice-guidance)
-  </br>&nbsp;&nbsp;&nbsp;&nbsp;[(B) Robot Localization and Pose Estimation]((b)-robot-localization-and-pose-estimation )
+  </br>&nbsp;&nbsp;&nbsp;&nbsp;[(B) Robot Localization and Pose Estimation]((b)-robot-localization-and-pose-estimation)
   </br>&nbsp;&nbsp;&nbsp;&nbsp;[(C) Sidewalk Detection]((c)-sidewalk-detection)
   </br>&nbsp;&nbsp;&nbsp;&nbsp;[(D) Traffic Light Detection]((d)-traffic-light-detection)
   </br>&nbsp;&nbsp;&nbsp;&nbsp;[(E) Obstacle Detection]((e)-obstacle-detection)
