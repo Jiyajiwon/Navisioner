@@ -46,7 +46,36 @@ _**Navisioner**_ is a robot
 
 
 ### (C) Sidewalk Detection
-test test 
+<img width="206" alt="Image" src="https://github.com/user-attachments/assets/dc6d0bf6-cdd3-4932-852d-a64f59b802d2" />
+
+We performed transfer learning on [Ultralytics](https://github.com/ultralytics)’s [YOLOv8](https://github.com/ultralytics/ultralytics) Segmentation model using 45,000 images from [AI Hub](https://www.aihub.or.kr/), an open dataset platform. [The dataset](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=&topMenu=&aihubDataSe=data&dataSetSn=189) includes annotations in box and polygon formats for 29 types of objects obstructing Indian pedestrian pathways, as well as polygon annotations for sidewalk surface conditions.
+<br/>
+
+<img width="756" alt="Image" src="https://github.com/user-attachments/assets/cbfa27b5-b3a2-4e6d-aca7-c8b9bd72ded2" />
+
+Due to the performance limitations of edge devices, there was an issue with slow real-time processing speed.
+<br/>
+To address this, we converted the PyTorch model to TensorRT and applied INT8 quantization to accelerate the inference speed. As a result, we were able to improve latency by 65% while reducing mAP loss.
+<br/>
+
+<img width="660" alt="Image" src="https://github.com/user-attachments/assets/505040da-928d-41d0-8e14-05ba19f63e81" />
+
+The detection process is as follows: 
+<br/>The RGB video is captured from the camera, and the pedestrian road area is segmented.
+<br/>
+An algorithm compares the detected sidewalk's two edges with experimentally obtained threshold points to localize the robot, ensuring that it moves only within the sidewalk.
+<br/>
+
+<img width="1283" alt="Image" src="https://github.com/user-attachments/assets/bf09993b-f353-4299-8354-363a2f5b690e" />
+
+This diagram simplifies the algorithm.
+<br/>
+In the first image, when comparing the threshold with the sidewalk edges, the robot is at the center of the sidewalk, so it moves straight ahead.
+<br/>
+Depending on the condition, if the robot is shifted to the left, it moves right; if shifted to the right, it moves left.
+<br/>
+In this way, the robot's angular velocity and speed are adjusted and controlled via ROS according to each situation.
+<br/>
 
 ### (D) Traffic Light Detection
 
