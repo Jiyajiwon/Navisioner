@@ -79,6 +79,17 @@ In this way, the robot's angular velocity and speed are adjusted and controlled 
 
 ### (D) Traffic Light Detection
 
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/411e0f85-9686-4081-9a63-be5ef50376fe/05668a10-1aef-4412-9a73-b3d00bbce9a8/image.png)
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/411e0f85-9686-4081-9a63-be5ef50376fe/a0535548-4010-45c5-9ba9-5da161510ac7/image.png)
+
+Using the crosswalk location information received from the Tmap API, the robot verifies that it has reached the crosswalk. If it is determined that the crosswalk has been reached, the YOLOv8 model will crop only the traffic light in the image, and use this cropped image to determine if it is a green light and to cross.
+
+The cropped image is determined whether it is a green light through three steps.
+
+1. Check the color with the HSV filter.
+2. A moving average filter is applied to prevent noise-induced errors, and it is considered green only when the average value is above 0.5.
+3. Using the ‘red flag’, it does not cross when the signal's remaining time is short, but moves only when it changes from red to green. This allows the robot to safely cross the crosswalk.
 
 ### (E) Obstacle Detection
 
