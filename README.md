@@ -40,7 +40,10 @@ _**Navisioner**_ is a robot
 ## Technologies
 
 ### (A) Voice Commands and Route Voice Guidance
-
+![image](https://github.com/user-attachments/assets/47957358-4115-43eb-9c3f-5bec45cfac00)
+<div align="left">
+The user sets the departure and destination points by voice using the Whisper STT model on a Flask server and receives voice guidance through the Web Speech API. The configured route is converted into latitude and longitude values and searched using the Tmap server. The four pieces of information obtained are converted into ROS message format using roslibjs and sent to the robot via the Rosbridge server. The robot then begins navigation based on the provided route.
+</div>
 
 ### (B) Robot Localization and Pose Estimation 
 ![image](https://github.com/user-attachments/assets/9f74b5af-1504-47e4-a825-88885345a4f6)
