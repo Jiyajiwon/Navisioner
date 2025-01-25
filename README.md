@@ -43,7 +43,18 @@ _**Navisioner**_ is a robot
 
 
 ### (B) Robot Localization and Pose Estimation 
+![image](https://github.com/user-attachments/assets/9f74b5af-1504-47e4-a825-88885345a4f6)
+<div align="left">
+The robot estimates its current position based on the latitude and longitude values received via GPS during navigation and estimates its orientation using the IMU.
 
+It compares the waypoints of the pedestrian route received from the web server with the robot's current GPS position to determine whether a waypoint has been reached. Once a waypoint is reached, the required heading to the next waypoint is calculated, and the robot rotates accordingly. During the rotation, the IMU's z-axis data is used to check whether the target heading has been achieved. After reaching the target heading, the robot starts moving toward the next waypoint.
+
+During this process, functions such as pedestrian path detection, obstacle detection, and voice guidance for navigation are performed to ensure safe travel to the next waypoint.
+
+When the robot reaches the final waypoint, it is considered the destination, and the robot stops.
+
+To consider the perspective of visually impaired individuals, I simulated the service with my eyes closed and found that the directional changes were not as noticeable as expected. To provide directional guidance while ensuring safety, the robot is programmed to stop and then rotate after providing a voice announcement for maneuvers related to "turn type" rotations. For tracking other waypoints, the Pure Pursuit algorithm is used.
+</div>
 
 ### (C) Sidewalk Detection
 <img width="206" alt="Image" src="https://github.com/user-attachments/assets/dc6d0bf6-cdd3-4932-852d-a64f59b802d2" />
